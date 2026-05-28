@@ -1,0 +1,249 @@
+/* ==========================================================================
+   1. RESET & CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    /* Mantive o gradiente como fallback caso o vídeo falhe ou demore a carregar */
+    background: radial-gradient(circle at top, #1e1b4b 0%, #0f172a 100%);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: #f8fafc;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* ==========================================================================
+     1.1 VÍDEO DE FUNDO
+     ========================================================================== */
+  #video-fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Garante que o vídeo cubra a tela inteira sem distorcer */
+    z-index: -1;       /* Joga o vídeo para trás de todo o conteúdo */
+  }
+  
+  /* ==========================================================================
+     2. NAVBAR (MENU DE NAVEGAÇÃO)
+     ========================================================================== */
+  .navbar {
+    background-color: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 1.2rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  /* Estilo sofisticado para os links do menu */
+  .botao-link {
+    color: #94a3b8;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+  }
+  
+  .botao-link:hover {
+    color: #06b6d4;
+    background-color: rgba(6, 182, 212, 0.1);
+  }
+  
+  /* Botão hambúrguer para mobile */
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #f8fafc;
+    font-size: 1.75rem;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  /* ==========================================================================
+     3. LAYOUT PRINCIPAL & SEÇÕES
+     ========================================================================== */
+  main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+  }
+  
+  .content-section {
+    margin-bottom: 40px;
+    /* Ajustei a opacidade para 0.65 para o vídeo de fundo aparecer sutilmente através dos cards */
+    background: rgba(30, 41, 59, 0.65);
+    backdrop-filter: blur(4px); /* Efeito de vidro jateado bem leve nos cards */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 16px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .content-section:hover {
+    transform: translateY(-4px);
+    border-color: rgba(124, 58, 237, 0.3); /* Destaque roxo sutil ao passar o mouse */
+  }
+  
+  .content-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #f8fafc;
+    letter-spacing: -0.02em;
+  }
+  
+  /* Textos internos das seções */
+  .conteudo__titulo {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #06b6d4;
+    margin-bottom: 12px;
+  }
+  
+  .conteudo__texto {
+    color: #cbd5e1;
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+  
+  .conteudo__lista {
+    margin-left: 20px;
+    color: #cbd5e1;
+    margin-bottom: 16px;
+  }
+  
+  .conteudo__lista li {
+    margin-bottom: 8px;
+  }
+  
+  /* Conteúdo que começa oculto */
+  .content {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: #cbd5e1;
+    display: none;
+  }
+  
+  /* ==========================================================================
+     4. BOTÕES DEAÇÃO (TOGGLE)
+     ========================================================================== */
+  .toggle-content {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+    color: #ffffff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);
+  }
+  
+  .toggle-content:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
+    filter: brightness(1.1);
+  }
+  
+  .toggle-content:active {
+    transform: translateY(0);
+  }
+  
+  /* ==========================================================================
+     5. RODAPÉ (FOOTER)
+     ========================================================================== */
+  footer {
+    /* Substituído o fundo sólido por um levemente transparente para combinar com a estética */
+    background-color: rgba(15, 23, 42, 0.9);
+    color: #64748b;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  /* ==========================================================================
+     6. RESPONSIVIDADE (MOBILE)
+     ========================================================================== */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .navbar {
+      padding: 1rem;
+    }
+  
+    .navbar ul {
+      flex-direction: column;
+      gap: 8px;
+      display: none;
+      width: 100%;
+      margin-top: 20px;
+      background-color: #0f172a;
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+  
+    .navbar ul.active {
+      display: flex;
+    }
+  
+    .botao-link {
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-size: 1.1rem;
+      padding: 12px;
+    }
+  
+    main {
+      padding: 40px 16px;
+    }
+  
+    .content-section {
+      padding: 24px 20px;
+    }
+  
+    .content-section h2 {
+      font-size: 1.6rem;
+    }
+  
+    .toggle-content {
+      width: 100%;
+    }
+  }
