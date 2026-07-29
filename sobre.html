@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IA e Modelagem 3D</title>
+  <title>História da Inteligência Artificial</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,21 +11,221 @@
     <nav class="navbar">
       <ul>
         <li><a href="index.html" class="botao-link">Início</a></li>
-        <li><a href="ia.html" class="botao-link"> Inteligência artificial</a></li>
-        <li><a href="cinema3d.html" class="botao-link"> Principais Funções da Inteligência Artificial na indústria 4.0</a></li>
+        <li><a href="ia.html" class="botao-link">Inteligência Artificial</a></li>
+        <li><a href="cinema3d.html" class="botao-link">Principais Funções da IA na Indústria 4.0</a></li>
       </ul>
     </nav>
   </header>
-<p>
-<h2> "Gostaríamos de agradecer a todos que demonstraram interesse em nosso projeto e visitaram o site. Sua participação foi fundamental para nós. Esperamos que a experiência seja positiva, pois nos dedicamos ao máximo para entregar um resultado de qualidade."
-</h2>
-<h2>Gustavo Vicente Rodrigues:</h2>
-<h3>Criador e Programador do site.</h3>
-<h2>Thiago Henrique De Paula:</h2>
-<h3>Designer.</h3>
-</p>
+
   <main>
-    
+    <section class="conteudo">
+      <h2 class="conteudo__titulo">A História da Inteligência Artificial</h2>
+
+      <p class="conteudo__texto">
+        A Inteligência Artificial (IA) não nasceu da noite para o dia. Ela é o resultado de décadas de ideias, 
+        experimentos, avanços teóricos e também de períodos de desilusão conhecidos como “Invernos da IA”. 
+        Abaixo, percorremos os principais marcos que moldaram a tecnologia que hoje transforma a indústria, 
+        o entretenimento e o nosso dia a dia.
+      </p>
+
+      <!-- ========== 1950s ========== -->
+      <h4 class="conteudo__titulo">1950 – O Teste de Turing e o Nascimento do Conceito</h4>
+      <p class="conteudo__texto">
+        Em 1950, o matemático britânico <strong>Alan Turing</strong> publicou o artigo 
+        <em>“Computing Machinery and Intelligence”</em>, no qual propôs a pergunta: 
+        “As máquinas podem pensar?”. Ele criou o famoso <strong>Teste de Turing</strong>: 
+        se uma máquina conseguir conversar de forma indistinguível de um humano, ela pode ser considerada inteligente.
+      </p>
+      <p class="conteudo__texto">
+        Esse momento é considerado o marco filosófico e teórico da Inteligência Artificial.
+      </p>
+
+      <pre class="conteudo__codigo"><code>
+# Simulação simplificada do conceito do Teste de Turing (Python)
+def teste_turing(resposta_maquina, resposta_humana):
+    """
+    Em um Teste de Turing real, um juiz conversa com uma máquina e um humano
+    sem saber quem é quem. Se não conseguir distinguir, a máquina "passa".
+    """
+    if resposta_maquina.lower() == resposta_humana.lower():
+        return "O juiz não conseguiu distinguir. A máquina passou no teste!"
+    else:
+        return "O juiz identificou a diferença. A máquina ainda não passou."
+
+print(teste_turing("Olá, como você está?", "Olá, como você está?"))
+      </code></pre>
+
+      <!-- ========== 1956 ========== -->
+      <h4 class="conteudo__titulo">1956 – A Conferência de Dartmouth</h4>
+      <p class="conteudo__texto">
+        Em 1956, um grupo de pesquisadores (John McCarthy, Marvin Minsky, Claude Shannon e outros) 
+        se reuniu no Dartmouth College (EUA). Foi nessa conferência que o termo 
+        <strong>“Artificial Intelligence”</strong> foi oficialmente cunhado por John McCarthy. 
+        O otimismo era enorme: acreditava-se que máquinas inteligentes seriam realidade em poucas décadas.
+      </p>
+
+      <!-- ========== 1960s-1970s ========== -->
+      <h4 class="conteudo__titulo">Décadas de 1960 e 1970 – Os Primeiros Sistemas e o Otimismo</h4>
+      <p class="conteudo__texto">
+        Surgiram os primeiros programas de IA:
+      </p>
+      <ul class="conteudo__lista">
+        <li class="lista__item"><strong>Logic Theorist (1956)</strong> – considerado o primeiro programa de IA, capaz de provar teoremas matemáticos.</li>
+        <li class="lista__item"><strong>ELIZA (1966)</strong> – chatbot criado por Joseph Weizenbaum que simulava um psicoterapeuta.</li>
+        <li class="lista__item"><strong>Shakey (1966-1972)</strong> – o primeiro robô móvel controlado por IA.</li>
+        <li class="lista__item"><strong>Sistemas especialistas</strong> – programas que tentavam replicar o conhecimento de especialistas humanos em áreas específicas (medicina, geologia etc.).</li>
+      </ul>
+
+      <pre class="conteudo__codigo"><code>
+# Versão ultra-simplificada inspirada no ELIZA (1966)
+def eliza_simples(mensagem):
+    mensagem = mensagem.lower()
+    if "triste" in mensagem or "mal" in mensagem:
+        return "Por que você se sente assim? Conte-me mais."
+    elif "mãe" in mensagem or "pai" in mensagem:
+        return "Fale mais sobre sua família."
+    elif "olá" in mensagem or "oi" in mensagem:
+        return "Olá! Como você está se sentindo hoje?"
+    else:
+        return "Interessante... continue."
+
+print(eliza_simples("Estou me sentindo triste hoje"))
+print(eliza_simples("Minha mãe não me entende"))
+      </code></pre>
+
+      <!-- ========== Invernos ========== -->
+      <h4 class="conteudo__titulo">Final dos anos 1970 e 1980 – Os “Invernos da IA”</h4>
+      <p class="conteudo__texto">
+        As expectativas eram muito altas e os resultados não acompanharam. Computadores da época 
+        tinham pouquíssima memória e poder de processamento. Os sistemas especialistas eram caros, 
+        difíceis de manter e não generalizavam bem. O financiamento público e privado caiu drasticamente. 
+        Esses períodos de desilusão ficaram conhecidos como <strong>AI Winters</strong> (Invernos da IA).
+      </p>
+
+      <!-- ========== 1990s ========== -->
+      <h4 class="conteudo__titulo">Anos 1990 – O Retorno com Machine Learning</h4>
+      <p class="conteudo__texto">
+        A IA voltou com força graças ao crescimento do poder computacional e ao surgimento de 
+        algoritmos de <strong>Machine Learning</strong>. Em 1997, o computador <strong>Deep Blue</strong> 
+        da IBM derrotou o campeão mundial de xadrez Garry Kasparov — um marco histórico.
+      </p>
+
+      <!-- ========== 2010s ========== -->
+      <h4 class="conteudo__titulo">Década de 2010 – Deep Learning e a Explosão da IA Moderna</h4>
+      <p class="conteudo__texto">
+        Com o avanço das GPUs, big data e redes neurais profundas (Deep Learning), a IA deu um salto enorme:
+      </p>
+      <ul class="conteudo__lista">
+        <li class="lista__item"><strong>2011</strong> – Watson (IBM) vence o programa de TV Jeopardy!.</li>
+        <li class="lista__item"><strong>2012</strong> – AlexNet revoluciona o reconhecimento de imagens (ImageNet).</li>
+        <li class="lista__item"><strong>2014</strong> – Generative Adversarial Networks (GANs) são propostas por Ian Goodfellow.</li>
+        <li class="lista__item"><strong>2016</strong> – AlphaGo (DeepMind) derrota o campeão mundial de Go, Lee Sedol.</li>
+        <li class="lista__item"><strong>2017</strong> – O artigo “Attention Is All You Need” apresenta os Transformers (base do GPT e similares).</li>
+      </ul>
+
+      <pre class="conteudo__codigo"><code>
+# Exemplo minimalista de uma rede neural com PyTorch (conceito moderno)
+import torch
+import torch.nn as nn
+
+class RedeSimples(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.camada1 = nn.Linear(10, 32)   # 10 entradas → 32 neurônios
+        self.camada2 = nn.Linear(32, 2)    # 32 → 2 classes de saída
+
+    def forward(self, x):
+        x = torch.relu(self.camada1(x))
+        x = self.camada2(x)
+        return x
+
+modelo = RedeSimples()
+print(modelo)
+# Esta é a base do Deep Learning que impulsiona a IA atual
+      </code></pre>
+
+      <!-- ========== 2020s ========== -->
+      <h4 class="conteudo__titulo">2020 até hoje – A Era Generativa</h4>
+      <p class="conteudo__texto">
+        A partir de 2020, a IA generativa explodiu no mainstream:
+      </p>
+      <ul class="conteudo__lista">
+        <li class="lista__item"><strong>GPT-3 (2020)</strong> e depois GPT-4, Claude, Gemini e outros modelos de linguagem.</li>
+        <li class="lista__item"><strong>DALL·E, Midjourney, Stable Diffusion</strong> – geração de imagens a partir de texto.</li>
+        <li class="lista__item"><strong>Sora, Runway, Kling</strong> – geração de vídeos.</li>
+        <li class="lista__item"><strong>Modelos multimodais</strong> que entendem texto, imagem, áudio e vídeo ao mesmo tempo.</li>
+        <li class="lista__item">Integração profunda com a Indústria 4.0, gêmeos digitais, robótica e modelagem 3D.</li>
+      </ul>
+
+      <pre class="conteudo__codigo"><code>
+# Exemplo de uso moderno de IA generativa (conceitual)
+# Usando uma API de modelo de linguagem (ex: OpenAI, Grok, etc.)
+
+import requests
+
+def gerar_texto_com_ia(prompt):
+    resposta = requests.post(
+        "https://api.exemplo-ia.com/v1/chat",
+        headers={"Authorization": "Bearer SEU_TOKEN"},
+        json={
+            "model": "gpt-4o",
+            "messages": [
+                {"role": "system", "content": "Você é um especialista em história da IA."},
+                {"role": "user", "content": prompt}
+            ]
+        }
+    )
+    return resposta.json()["choices"][0]["message"]["content"]
+
+# Exemplo de chamada:
+# print(gerar_texto_com_ia("Resuma a importância do artigo Attention Is All You Need"))
+      </code></pre>
+
+      <!-- ========== Linha do tempo ========== -->
+      <h4 class="conteudo__titulo">Linha do Tempo Resumida</h4>
+      <ul class="conteudo__lista">
+        <li class="lista__item"><strong>1950</strong> – Teste de Turing</li>
+        <li class="lista__item"><strong>1956</strong> – Conferência de Dartmouth (nascimento oficial da IA)</li>
+        <li class="lista__item"><strong>1966</strong> – ELIZA</li>
+        <li class="lista__item"><strong>1970–1980s</strong> – Invernos da IA</li>
+        <li class="lista__item"><strong>1997</strong> – Deep Blue vence Kasparov</li>
+        <li class="lista__item"><strong>2012</strong> – Revolução do Deep Learning (AlexNet)</li>
+        <li class="lista__item"><strong>2016</strong> – AlphaGo</li>
+        <li class="lista__item"><strong>2017</strong> – Transformers</li>
+        <li class="lista__item"><strong>2020–2026</strong> – Era dos Modelos Generativos de larga escala</li>
+      </ul>
+
+      <h4 class="conteudo__titulo">Conclusão</h4>
+      <p class="conteudo__texto">
+        A história da Inteligência Artificial é marcada por ciclos de entusiasmo e frustração. 
+        O que mudou nos últimos anos foi a combinação de poder computacional massivo, 
+        volumes enormes de dados e arquiteturas neurais muito mais eficientes. 
+        Hoje a IA não é mais apenas um campo de pesquisa — ela já está presente na indústria, 
+        na medicina, no design 3D, nos sistemas de recomendação e em quase todos os aspectos da vida moderna.
+      </p>
+    </section>
+
+    <!-- Seção de agradecimentos e créditos -->
+    <section class="conteudo">
+      <h2 class="conteudo__titulo">Agradecimentos</h2>
+      <p class="conteudo__texto">
+        Gostaríamos de agradecer a todos que demonstraram interesse em nosso projeto e visitaram o site. 
+        Sua participação foi fundamental para nós. Esperamos que a experiência seja positiva, 
+        pois nos dedicamos ao máximo para entregar um resultado de qualidade.
+      </p>
+
+      <h4 class="conteudo__titulo">Equipe</h4>
+      <ul class="conteudo__lista">
+        <li class="lista__item">
+          <strong>Gustavo Vicente Rodrigues</strong> — Criador e Programador do site
+        </li>
+        <li class="lista__item">
+          <strong>Thiago Henrique De Paula</strong> — Designer
+        </li>
+      </ul>
+    </section>
+  </main>
+
   <footer>
     <p>&copy; 2025 Hologramas e IA. Todos os direitos reservados.</p>
   </footer>
